@@ -30,7 +30,7 @@ Este projeto é um sistema de gerenciamento de vagas de estacionamento desenvolv
 1. Clone o repositório:
 
 ```
-git clone https://github.com/seu-usuario/nome-do-projeto.git
+git clone https://github.com/wdson91/Api-ParkingControl.git
 ```
 
 2. Altere as configurações de banco de dados no arquivo `application.properties`.
@@ -46,7 +46,7 @@ mvn spring-boot:run
 ### Cadastrar uma nova vaga de estacionamento
 
 ```
-POST /parkingSpots
+POST /parking-spot
 ```
 
 Body da requisição:
@@ -58,7 +58,6 @@ Body da requisição:
   "brandCar": "Chevrolet",
   "modelCar": "Onix",
   "colorCar": "Preto",
-  "registrationDate": "2022-05-17T09:00:00",
   "responsibleName": "João da Silva",
   "apartment": "101",
   "block": "A"
@@ -68,7 +67,7 @@ Body da requisição:
 ### Editar os dados de uma vaga de estacionamento existente
 
 ```
-PUT /parkingSpots/{id}
+PUT /parking-spot/{id}
 ```
 
 Body da requisição:
@@ -80,7 +79,6 @@ Body da requisição:
   "brandCar": "Chevrolet",
   "modelCar": "Onix",
   "colorCar": "Branco",
-  "registrationDate": "2022-05-17T09:00:00",
   "responsibleName": "João da Silva",
   "apartment": "101",
   "block": "A"
@@ -90,14 +88,15 @@ Body da requisição:
 ### Excluir uma vaga de estacionamento
 
 ```
-DELETE /parkingSpots/{id}
+DELETE /parking-spot/{id}
 ```
 
 ### Listar todas as vagas de estacionamento cadastradas
 
 ```
-GET /parkingSpots
+GET /parking-spot
 ```
+### Funcionalidades Futuras
 
 ### Buscar uma vaga de estacionamento por número da vaga
 
@@ -111,6 +110,4 @@ GET /parkingSpots/search/findByParkingSpotNumber?parkingSpotNumber=A1
 GET /parkingSpots/search/findByColorCar?colorCar=Branco
 ```
 
-## Licença
 
-Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
